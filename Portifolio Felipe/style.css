@@ -63,13 +63,18 @@ header {
 .navbar a {
     display: block;
 }
+.contatos_navegacao {
+    display: flex;
+}
+
+
+
 @media (max-width: 768px) {
     header {
         display: flex;
         justify-content: space-between;
     }
-    .navbar,
-    .contatos_navbar {
+    .navbar{
         display: none;
         flex-direction: column;
         width: 100%;
@@ -85,8 +90,7 @@ header {
         margin-right: 20px;
     }
     /* Mostra o menu e os contatos quando o menu estiver ativo */
-    .navbar.active,
-    .contatos_navbar.active {
+    .navbar.active {
         display: flex;
     }
     /* Menu de navegação */
@@ -100,6 +104,7 @@ header {
         left: 0;
         padding: 10px 0;
         z-index: 1; /* Garante que o menu apareça por cima de outros elementos */
+        
     }
     .navbar a {
         padding: 10px 20px;
@@ -111,10 +116,5 @@ header {
     .navbar a:hover {
         color: rgba(255, 255, 255, 0.42);
         transition-duration: 0.5s;
-    }
-
-    /* Estilo para os ícones de redes sociais */
-    .contatos_navbar a {
-        margin-left: 10px;
     }
 }
