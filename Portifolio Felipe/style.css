@@ -1,0 +1,120 @@
+/*AQUI IREI MODELAR TODA A PAGINA*/
+@font-face {
+    font-family: 'K2D';
+    src: url('K2D/K2D-Regular.ttf')
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'K2D';
+    background: linear-gradient(to right, #1D2026, #000000);
+}
+/*AQUI IREI MNODELAR O HEADER*/
+header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(11, 12, 13, 1);
+    box-shadow: 0px 4px 10px #0F1013;
+}
+.logo_navbar {
+    display: flex;
+    align-items: center;
+}
+.logo > img {
+    height: 110px;
+    margin-right: 30px;
+}
+.navbar > a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    margin-right: 10px;
+}
+.navbar > a:hover {
+    color: rgba(255, 255, 255, 0.42);
+    transition-duration: 0.5s;
+}
+.contatos_navbar {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.contatos_navbar > a > i {
+    color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.contatos_navbar > a > i:hover {
+    color: rgba(255, 255, 255, 0.42);
+    transition-duration: 0.5s;
+}
+.hamburguer {
+    display: none;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+}
+.navbar {
+    display: flex;
+}
+.navbar a {
+    display: block;
+}
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar,
+    .contatos_navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(11, 12, 13, 1);
+        position: absolute;
+        top: 110px;
+        left: 0;
+        padding: 10px 0;
+    }
+    /* Exibe o ícone de hambúrguer */
+    .hamburguer {
+        display: flex;
+        margin-right: 20px;
+    }
+    /* Mostra o menu e os contatos quando o menu estiver ativo */
+    .navbar.active,
+    .contatos_navbar.active {
+        display: flex;
+    }
+    /* Menu de navegação */
+    .navbar {
+        display: none; /* Esconde o menu inicialmente */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(11, 12, 13, 1);
+        position: absolute;
+        top: 110px; /* Ajuste para colocar abaixo do header */
+        left: 0;
+        padding: 10px 0;
+        z-index: 1; /* Garante que o menu apareça por cima de outros elementos */
+    }
+    .navbar a {
+        padding: 10px 20px;
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .navbar a:hover {
+        color: rgba(255, 255, 255, 0.42);
+        transition-duration: 0.5s;
+    }
+
+    /* Estilo para os ícones de redes sociais */
+    .contatos_navbar a {
+        margin-left: 10px;
+    }
+}
