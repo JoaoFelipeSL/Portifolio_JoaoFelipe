@@ -7,7 +7,11 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'K2D';
-    background: linear-gradient(to right, #1D2026, #000000);
+    background: linear-gradient(to right, #0F1013, #000000);
+    
+}
+html {
+    scroll-behavior: smooth;
 }
 /*AQUI IREI MNODELAR O HEADER*/
 header {
@@ -18,6 +22,10 @@ header {
     justify-content: space-between;
     background-color: rgba(11, 12, 13, 1);
     box-shadow: 0px 4px 10px #0F1013;
+    position: sticky !important;
+    top: 0;
+    position: relative;
+    z-index: 10;
 }
 .logo_navbar {
     display: flex;
@@ -54,7 +62,7 @@ header {
 .hamburguer {
     display: none;
     cursor: pointer;
-    color: rgba(255, 255, 255, 1);
+    color: rgb(203, 206, 38);
     font-size: 30px;
 }
 .navbar {
@@ -66,8 +74,6 @@ header {
 .contatos_navegacao {
     display: flex;
 }
-
-
 
 @media (max-width: 768px) {
     header {
@@ -117,4 +123,204 @@ header {
         color: rgba(255, 255, 255, 0.42);
         transition-duration: 0.5s;
     }
+}
+/*AQUI IREI MNODELAR O MAIN*/
+main {
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+}
+/*HERO*/
+.hero {
+    max-width: 1600px;
+    height: 920px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info_hero {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.text_hero h1 {
+    font-size: 80px;
+    margin-bottom: 0;
+}
+
+.text_hero h3 {
+    color: rgba(255, 255, 255, 0.557);
+}
+
+.info_hero button {
+    width: 320px;
+    height: 60px;
+    background-color: #00000000;
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.info_hero button:hover {
+    background-color: rgba(255, 255, 255, 0.434);
+    color: #000000a9;
+    transition-duration: 1s;
+}
+
+/* Estilo da imagem do hero */
+.imagem_hero > img {
+    height: 900px;
+    opacity: 0.5;
+    filter: brightness(0.4); /* Escurece a imagem, o valor vai de 0 (totalmente escuro) a 1 (brilho normal) */
+    margin-right: 200px;
+    margin-left: 150px;
+    transform: scaleX(-1); /* Inverte a imagem horizontalmente */
+}
+
+/* Responsividade - Media Query */
+@media (max-width: 1500px) {
+    main {
+        height: 800px;
+    }
+    .hero {
+        flex-direction: row; /* Permanece em linha até 1200px */
+        height: 900px;
+    }
+
+    .info_hero {
+        margin-left: 50px;
+        text-align: left;
+    }
+
+    .imagem_hero > img {
+        height: 900px; /* Diminui a altura da imagem */
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .text_hero h1 {
+        font-size: 60px; /* Ajusta o tamanho da fonte */
+    }
+
+    .text_hero h3 {
+        font-size: 22px; /* Ajusta o tamanho da fonte */
+    }
+
+    .info_hero button {
+        width: 280px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column; /* Permanece em linha até 768px */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagem_hero > img {
+        height: 500px;
+        border-radius: 100%;
+        margin: 0;
+    }
+
+    .info_hero {
+        text-align: center;
+        margin: 0;
+    }
+
+    .text_hero h1 {
+        font-size: 50px; /* Ajusta o tamanho da fonte */
+    }
+
+    .text_hero h3 {
+        font-size: 20px; /* Ajusta o tamanho da fonte */
+    }
+
+    .info_hero button {
+        width: 250px;
+        height: 45px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Agora, para telas de celular (480px ou menor), o layout vira coluna */
+    .hero {
+        flex-direction: column; /* Empilha os elementos em coluna */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagem_hero > img {
+        height: 300px; /* Torna a imagem menor */
+        width: 300px; /* Torna a imagem redonda */
+        border-radius: 50%; /* Torna a imagem redonda */
+        opacity: 1; /* Aumenta a opacidade */
+        margin: 0; /* Remove as margens laterais */
+    }
+
+    .info_hero {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .text_hero h1 {
+        font-size: 35px; /* Ajusta o tamanho da fonte */
+    }
+
+    .text_hero h3 {
+        font-size: 18px; /* Ajusta o tamanho da fonte */
+    }
+
+    .info_hero button {
+        width: 250px;
+        height: 45px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+}
+/*ARTE*/
+.Arte {
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Arte h1 {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+#welcome-message::after {
+    content: "|"; /* Simula o cursor */
+    display: inline-block;
+    animation: blink 0.7s infinite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/*SOBRE MIM*/
+.sobre_mim {
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    display: flex;
+    justify-content: center;
 }
