@@ -80,8 +80,11 @@ header {
         display: flex;
         justify-content: space-between;
     }
-    .navbar{
-        display: none;
+    .navbar {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
         width: 100%;
         background-color: rgba(11, 12, 13, 1);
@@ -89,28 +92,21 @@ header {
         top: 110px;
         left: 0;
         padding: 10px 0;
+        z-index: 10;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s;
     }
-    /* Exibe o ícone de hambúrguer */
+    
+    /* Mostra o menu e os contatos quando o menu estiver ativo */
+    .navbar.active {
+        visibility: visible;
+        opacity: 1;
+        max-height: 500px; /* Ajuste conforme necessário */
+    }
+    
+    /* Ícone de hambúrguer */
     .hamburguer {
         display: flex;
         margin-right: 20px;
-    }
-    /* Mostra o menu e os contatos quando o menu estiver ativo */
-    .navbar.active {
-        display: flex;
-    }
-    /* Menu de navegação */
-    .navbar {
-        display: none; /* Esconde o menu inicialmente */
-        flex-direction: column;
-        width: 100%;
-        background-color: rgba(11, 12, 13, 1);
-        position: absolute;
-        top: 110px; /* Ajuste para colocar abaixo do header */
-        left: 0;
-        padding: 10px 0;
-        z-index: 1; /* Garante que o menu apareça por cima de outros elementos */
-        
     }
     .navbar a {
         padding: 10px 20px;
@@ -295,6 +291,10 @@ main {
         font-size: 16px;
         margin-top: 30px;
     }
+
+    .hero {
+        margin-top: 150px;
+    }
 }
 /*ARTE*/
 .Arte {
@@ -353,6 +353,9 @@ main {
     }
     .Arte h1 {
         font-size: 20px;
+    }
+    .Arte {
+        height: 900px;
     }
 }
 
@@ -424,6 +427,9 @@ main {
      .info_sobreMim p {
         font-size: 15px;
      }
+     .sobre_mim {
+        height: 600px;
+     }
 }
 @media (max-width: 480px) {
     .sobre_mim {
@@ -441,6 +447,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 35px;
     }
     .info_sobreMim {
         margin-left: 10px;
@@ -481,7 +488,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 600px;
+    height: 500px;
     width:420px;
     text-align: center;
     border-radius: 20px;
@@ -572,5 +579,177 @@ main {
         flex-wrap: wrap;
         transition-duration: 1s;
     }
+    .servicos {
+        height: 2000px;
+    }
     
+}
+/*TECNOLOGIAS*/
+.Tecnologias {
+    text-align: center;
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    justify-content: center;
+    align-items: center;
+}
+.Tecnologias > h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+.cards_tecnologias {
+    margin: auto;
+    max-width: 1100px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cards_tecnologias .card {
+    height: 270px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgba(255, 255, 255, 1);
+}
+.cards_tecnologias > .card > i {
+    font-size: 100px;
+    margin-top: 90px;
+}
+.cards_tecnologias > .card > h1 {
+    font-size: 30px;
+}
+.html_css {
+    margin-top: 90px;
+}
+
+/* Responsividade */
+@media (max-width: 1500px) {
+    .cards_tecnologias .card {
+        height:250px;
+        width: 250px;
+    }
+    .cards_tecnologias > .card > i {
+        font-size: 90px;
+    }
+    .cards_tecnologias > .card > h1 {
+        font-size: 25px;
+    }
+
+}
+@media (max-width: 1150px) {
+    .cards_tecnologias .card {
+        height: 230px;
+        width: 230px;
+    }
+    .cards_tecnologias > .card > i {
+        font-size: 90px;
+        margin-top: 60px;
+    }
+    .cards_tecnologias > .card > h1 {
+        font-size: 25px;
+    }
+    .html_css {
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+}
+@media (max-width: 780px) {
+    .cards_tecnologias .card {
+        height: 250px;
+        width: 250px;
+    }
+    .cards_tecnologias > .card > i {
+        font-size: 100px;
+    }
+    .cards_tecnologias > .card > h1 {
+        font-size: 20px;
+    }
+
+}
+@media (max-width: 480px) {
+    .cards_tecnologias .card {
+        height: 150px;
+        width: 150px;
+    }
+    .cards_tecnologias > .card > i {
+        font-size: 60px;
+        margin-top: 30px;
+    }
+    .cards_tecnologias > .card > h1 {
+        font-size: 20px;
+    }
+    .html_css {
+        margin-top: 30px;
+    }
+    .Tecnologias > h1 {
+        font-size: 30px;
+    }
+}
+
+/*Projetos*/
+.Projetos {
+    text-align: center;
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    justify-content: center;
+    align-items: center;
+}
+.cards_projetos {
+    margin: auto;
+    max-width: 1100px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+.Projetos > h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+.cards_projetos .card {
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgba(255, 255, 255, 1);
+}
+.cards_projetos> .card > img {
+    height: 350px;
+    width: 350px;
+}
+.cards_projetos > .card > h1 {
+    font-size: 40px;
+}
+.cards_projetos > .card > p{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.431);
+    
+}
+.cards_projetos > .card button {
+    font-size: 15px;
+    width: 270px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    background-color:  rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 0.463);
+
+}
+.cards_projetos > .card button:hover {
+    background-color: rgba(255, 255, 255, 0.434);
+    color: #000000a9;
+    transition-duration: 1s;
 }

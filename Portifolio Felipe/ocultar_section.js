@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 entry.target.style.opacity = "0"; // Oculta a seção
-                entry.target.style.transition = "opacity 2s ease"; // Efeito suave
+                entry.target.style.transition = "opacity 3s ease"; // Efeito suave
             } else {
                 entry.target.style.opacity = "1"; // Mostra a seção novamente
             }
