@@ -124,16 +124,35 @@
         </section>
         <section class="Projetos">
             <h1>Projetos</h1>
-            <div class="cards_projetos">
-                <div class="card">
-                    <img src="imagens/logo_emergencIA.png" alt="">
-                    <button>Saber mais</button>
+            <div class="carousel-container">
+                <button class="arrow left" onclick="moveCarousel(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <div class="carousel-item" onclick="toggleImage(this)">
+                            <img src="imagens/napneTelaLogin.png" alt="Imagem 1A" class="active">
+                            <img src="imagens/enapnePrincipal.png" alt="Imagem 1B" class="hidden">
+                            <div class="description">Sistema desenvolvido para atender às demandas do setor do NAPNE do IFRN Ceará-Mirim. O sistema tem como objetivo facilitar o acompanhamento de alunos com necessidades específicas, gerenciando o preenchimento do Plano Educacional Individualizado (PEI).</div>
+                        </div>
+                        <div class="carousel-item" onclick="toggleImage(this)">
+                            <img src="imagens/Captura de tela de 2025-03-27 19-10-10.png" alt="Imagem 2A" class="active">
+                            <img src="imagens/Captura de tela de 2025-03-27 19-10-52.png" alt="Imagem 2B" class="hidden">
+                            <div class="description">Sistema desenvolvido para simular uma loja virtual de maquiagem. O sistema conta com o gerenciamento de estoque dos produtos ofertados, além de simular as operações de compra e venda.</div>
+                        </div>
+                        <div class="carousel-item" onclick="toggleImage(this)">
+                            <img src="imagens/emeregencIAcarrosel1.png" alt="Imagem 3A" class="active">
+                            <img src="imagens/emergencIAcarrossel2.png" alt="Imagem 3B" class="hidden">
+                            <div class="description">O EmergencIA é um chatbot desenvolvido para auxiliar a segurança pública. O sistema conta com um chatbot no Telegram, além de agentes de inteligência artificial treinados para essa função.</div>
+                        </div>
+                        <div class="carousel-item" onclick="toggleImage(this)">
+                            <img src="image4a.jpg" alt="Imagem 4A" class="active">
+                            <img src="image4b.jpg" alt="Imagem 4B" class="hidden">
+                            <div class="description">Descrição da imagem 1</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <img id="logoNapne" src="imagens/logoEnapne.png" alt="">
-                    <button>Saber mais</button>
-                </div>
+                <button class="arrow right" onclick="moveCarousel(1)">&#10095;</button>
             </div>
+            <script src="carrosselProjetos.js"></script>
         </section>
     </main>
 <script src="ocultar_section.js"></script>
