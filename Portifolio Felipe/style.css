@@ -661,6 +661,9 @@ main {
 
 }
 @media (max-width: 780px) {
+    .Tecnologias {
+        height: 1800px;
+    }
     .cards_tecnologias .card {
         height: 250px;
         width: 250px;
@@ -674,6 +677,9 @@ main {
 
 }
 @media (max-width: 480px) {
+    .Tecnologias {
+        height: 1000px;
+    }
     .cards_tecnologias .card {
         height: 150px;
         width: 150px;
@@ -692,7 +698,6 @@ main {
         font-size: 30px;
     }
 }
-
 /*Projetos*/
 .Projetos {
     text-align: center;
@@ -710,7 +715,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 20px;
 }
 .Projetos > h1 {
@@ -736,7 +740,6 @@ main {
 .cards_projetos > .card > p{
     font-size: 20px;
     color: rgba(255, 255, 255, 0.431);
-    
 }
 .cards_projetos > .card button {
     font-size: 15px;
@@ -746,10 +749,86 @@ main {
     border-radius: 50px;
     background-color:  rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0, 0.463);
-
 }
 .cards_projetos > .card button:hover {
     background-color: rgba(255, 255, 255, 0.434);
     color: #000000a9;
     transition-duration: 1s;
+}
+/* Responsividade */
+@media (max-width: 1500px) {
+    .cards_projetos {
+        max-width: 1000px;
+    }
+    .cards_projetos .card {
+        width: 380px;
+    }
+    .cards_projetos > .card > img {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .cards_projetos {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .cards_projetos .card {
+        width: 350px;
+    }
+    .cards_projetos > .card > img {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 780px) {
+    .cards_projetos {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .cards_projetos .card {
+        width: 280px;
+    }
+    .cards_projetos > .card > img {
+        width: 220px;
+        height: 220px;
+    }
+    .cards_projetos > .card > h1 {
+        font-size: 30px;
+    }
+    .cards_projetos > .card > p {
+        font-size: 18px;
+    }
+    .cards_projetos > .card button {
+        width: 200px;
+        height: 60px;
+
+    }
+}
+@media (max-width: 480px) {
+    .cards_projetos {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .cards_projetos .card {
+        width: 280px;
+        height: 250px;
+    }
+    .cards_projetos > .card > img {
+        width: 180px;
+        height: 180px;
+    }
+    .cards_projetos > .card > h1 {
+        font-size: 30px;
+    }
+    .cards_projetos > .card > p {
+        font-size: 18px;
+    }
+    .cards_projetos > .card button {
+        width: 200px;
+        height: 60px;
+
+    }
 }
