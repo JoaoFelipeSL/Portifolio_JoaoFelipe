@@ -13,7 +13,7 @@ function moveCarousel(direction) {
         currentIndex = 0;
     }
 
-    const offset = -(currentIndex * (200 + 20)); // 200px de largura + 20px de margem
+    const offset = -(currentIndex * (200 + 20)); // 600px de largura + 20px de margem
     track.style.transform = `translateX(${offset}px)`;
 }
 
