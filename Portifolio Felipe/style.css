@@ -707,6 +707,7 @@ main {
     background: linear-gradient(to right, #0F1013, #000000);
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
 }
 .cards_projetos {
     margin: auto;
@@ -733,6 +734,9 @@ main {
 .cards_projetos> .card > img {
     height: 350px;
     width: 350px;
+}
+#logoNapne {
+    height: 250px;
 }
 .cards_projetos > .card > h1 {
     font-size: 40px;
