@@ -33,8 +33,9 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </section>
+        <script src="header.js"></script>
     </header>
-    <script src="header.js"></script>
+   
     <main>
         <section class="hero">
                 <div class="info_hero">
@@ -54,10 +55,42 @@
         </section>
         <!-- Link para o arquivo JavaScript externo -->
         <script src="escritor.js"></script>
-
         <section class="sobre_mim" id="sobre_mim">
-            
+            <div class="info_sobreMim">
+                <h1>Quem sou eu?</h1>
+                <p>Me chamo João Felipe, sou formado em Técnico de Informática pelo IFRN-Ceará-Mirim e atualmente curso Análise e Desenvolvimento de Sistemas na UF, campus Macaíba. Tenho uma forte habilidade em criatividade e persistência na resolução de problemas, sempre buscando soluções inovadoras e eficientes para os desafios que encontro.</p>
+            </div>
+            <div class="slider">
+                <img src="imagens/HAN_4181.jpg" class="active" alt="Minha Foto 1">
+                <img src="imagens/HAN_4172.jpg" alt="Minha Foto 2">
+                <img src="imagens/HAN_4184.jpg" alt="Minha Foto 3">
+            </div>
         </section>
+        <script src="slide.js"></script>
+        <section class="servicos">
+            <div class="cards">
+                <div class="card">
+                    <h1>Web sites</h1>
+                    <i class="fa-solid fa-pager"></i>
+                    <p class="descricao" id="descricao-websites">Desenvolvo web sites, desde o design a linha de código.</p>
+                    <button class="toggle-btn" onclick="mostrarMais('websites')">Saber mais</button>
+                </div>
+                <div class="card">
+                    <h1>Sistemas</h1>
+                    <i class="fa-solid fa-database"></i>
+                    <p class="descricao" id="descricao-sistemas">Desenvolvo sistemas comerciais.</p>
+                    <button class="toggle-btn" onclick="mostrarMais('sistemas')">Saber mais</button>
+                </div>
+                <div class="card">
+                    <h1>Data base</h1>
+                    <i class="fa-solid fa-gears"></i>
+                    <p class="descricao" id="descricao-database">Trabalho com manipulação de dados em banco de dados.</p>
+                    <button class="toggle-btn" onclick="mostrarMais('database')">Saber mais</button>
+                </div>
+            </div> 
+        </section>
+        <script src="card_servicos.js"></script>    
     </main>
+<script src="ocultar_section.js"></script>
 </body>
 </html>

@@ -22,10 +22,10 @@ header {
     justify-content: space-between;
     background-color: rgba(11, 12, 13, 1);
     box-shadow: 0px 4px 10px #0F1013;
-    position: sticky !important;
+    position: fixed; /* FIXO no topo */
     top: 0;
-    position: relative;
-    z-index: 10;
+    left: 0;
+    z-index: 1000; /* Maior que qualquer outro elemento */
 }
 .logo_navbar {
     display: flex;
@@ -123,6 +123,13 @@ header {
         color: rgba(255, 255, 255, 0.42);
         transition-duration: 0.5s;
     }
+}
+@media (max-width: 480px) {
+    .contatos_navbar > a > i {
+        font-size: 25px;
+        margin-left: 10px;
+    }
+    
 }
 /*AQUI IREI MNODELAR O MAIN*/
 main {
@@ -314,6 +321,41 @@ main {
 @keyframes blink {
     50% { opacity: 0; }
 }
+/* Responsividade */
+@media (max-width: 1500px) {
+    .Arte img {
+        height: 500px;
+    }
+    .Arte h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Arte img {
+        height: 400px;
+    }
+    .Arte h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 700px) {
+    .Arte img {
+        height: 300px;
+    }
+    .Arte h1 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 480px) {
+    .Arte img {
+        height: 200px;
+    }
+    .Arte h1 {
+        font-size: 20px;
+    }
+}
+
 
 /*SOBRE MIM*/
 .sobre_mim {
@@ -323,4 +365,212 @@ main {
     background: linear-gradient(to right, #0F1013, #000000);
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.info_sobreMim {
+    width: 800px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+.info_sobreMim h1 {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 1);
+}
+.info_sobreMim p {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 1);
+}
+.slider {
+    position: relative;
+    width: 500px; /* Ajuste conforme necessário */
+    height: 600px;
+    margin-right: 30px;
+}
+
+.slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    border-radius: 10px;
+}
+.slider img.active {
+    opacity: 1; /* Apenas a imagem ativa será visível */
+}
+/* Responsividade */
+
+@media (max-width: 1000px) {
+    .slider {
+        width: 500px; /* Ajuste conforme necessário */
+        height: 500px;
+    }
+    .info_sobreMim h1 {
+        font-size: 45px;
+    }
+    .info_sobreMim p {
+        font-size: 20px;
+    }
+}
+@media (max-width: 700px) {
+    .slider {
+        width: 400px; /* Ajuste conforme necessário */
+        height: 400px;
+     }
+     .info_sobreMim h1 {
+        font-size: 40px;
+     }
+     .info_sobreMim p {
+        font-size: 15px;
+     }
+}
+@media (max-width: 480px) {
+    .sobre_mim {
+        display: flex;
+        flex-direction: column; /* Coloca os elementos em coluna */
+        align-items: center; /* Centraliza os itens */
+        text-align: center;
+        padding: 0; /* Remove qualquer espaçamento extra */
+        margin: 0 auto; /* Garante que a seção fique centralizada */
+    }
+    .slider {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 20px auto; /* Centraliza horizontalmente e adiciona espaçamento abaixo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info_sobreMim {
+        margin-left: 10px;
+        margin-right: 10PX;
+        max-width: 350px; /* Evita que o conteúdo fique muito espalhado */   
+    }
+    .info_sobreMim h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    .info_sobreMim p {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+}
+
+
+/*SERVIÇOS*/
+.servicos {
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards {
+    max-width: 1500px;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+.card {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+    width:420px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(11, 12, 13, 1);
+    box-shadow: 0px 4px 10px #0F1013;
+    height: auto; /* Permite que a altura aumente */
+}
+.card h1 {
+    color: rgba(255, 255, 255, 1);
+    font-size: 40px;
+}
+.card p {
+    color: rgba(255, 255, 255, 0.497);
+    font-size:20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.card i {
+    color: rgba(255, 255, 255, 1);
+    font-size: 100px; 
+}
+.card button {
+    font-size: 15px;
+    width: 270px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: rgb(255, 255, 255);
+    background-color: #00000000;
+}
+.card button:hover {
+    background-color: rgba(255, 255, 255, 0.434);
+    color: #000000a9;
+    transition-duration: 1s;
+}
+/* Estilo para a descrição */
+.descricao {
+    font-size: 16px;
+    line-height: 1.5;
+    max-height: 100px; /* Define uma altura máxima inicial */
+    overflow-y: auto; /* Permite rolagem se o conteúdo exceder */
+    transition: max-height 0.5s ease-in-out; /* Transição suave */
+}
+
+.descricao.expandido {
+    max-height: 500px; /* Permite a expansão para mostrar mais texto */
+}
+.descricao::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no navegador baseado em Webkit */
+}
+
+
+/* Responsividade */
+@media (max-width: 1500px) {
+    .card {
+        transition-duration: 1s !important;
+        height: 500px;
+        width:320px;   
+    }
+}
+@media (max-width: 1100px) {
+    .card {
+        height: 400px;
+        width:220px;
+        transition-duration: 1s !important;
+    }
+    .card h1 {
+        font-size: 30px;
+        transition-duration: 1s;
+    }
+    .card p {
+        font-size:15px;
+        transition-duration: 1s;
+    }
+    .card i {
+        font-size: 80px;
+        transition-duration: 1s;
+    }
+    .card button {
+        font-size: 15px;
+        width: 200px;
+        height: 40px;
+        transition-duration: 1s;
+    }
+}
+@media (max-width: 780px) {
+    .cards{
+        flex-wrap: wrap;
+        transition-duration: 1s;
+    }
+    
 }
