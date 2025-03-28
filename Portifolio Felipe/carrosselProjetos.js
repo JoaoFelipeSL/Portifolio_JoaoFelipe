@@ -1,24 +1,53 @@
 let currentIndex = 0;
 
 function moveCarousel(direction) {
-    const track = document.querySelector(".carousel-track");
-    const items = document.querySelectorAll(".carousel-item");
+    const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
-    const visibleItems = 1; // Número de itens visíveis por vez
+    currentIndex = (currentIndex + direction + totalItems) % totalItems; // Carrossel infinito
+    updateCarousel();
+}
 
-    currentIndex += direction;
-    if (currentIndex < 0) {
-        currentIndex = totalItems - visibleItems;
-    } else if (currentIndex > totalItems - visibleItems) {
-        currentIndex = 0;
-    }
+function updateCarousel() {
+    const track = document.querySelector('.carousel-track');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
 
-    const offset = -(currentIndex * (200 + 20)); // 600px de largura + 20px de margem
-    track.style.transform = `translateX(${offset}px)`;
+    // Ajuste do cálculo para garantir que a última imagem seja exibida corretamente
+    track.style.transform = `translateX(-${currentIndex * (items[0].offsetWidth + 20)}px)`; // A largura da imagem + margem
+
+    // A transição pode ser ajustada se necessário
+    track.style.transition = 'transform 0.5s ease-in-out';
 }
 
 function toggleImage(item) {
-    const images = item.querySelectorAll("img");
-    images[0].classList.toggle("hidden");
-    images[1].classList.toggle("hidden");
+    const images = item.querySelectorAll('img');
+    images[0].classList.toggle('active');
+    images[1].classList.toggle('hidden');
 }
+
+// Suporte a toque para navegar pelas imagens
+let touchStartX = 0;
+let touchEndX = 0;
+
+document.querySelector('.carousel-container').addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX; // Registro do toque inicial
+});
+
+document.querySelector('.carousel-container').addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX; // Registro do toque final
+
+    if (touchStartX > touchEndX) {
+        moveCarousel(1); // Deslizar para a esquerda
+    } else if (touchStartX < touchEndX) {
+        moveCarousel(-1); // Deslizar para a direita
+    }
+});
+
+// Exibir a descrição ao clicar na imagem
+const carouselItems = document.querySelectorAll('.carousel-item');
+carouselItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const description = item.querySelector('.description');
+        description.style.bottom = description.style.bottom === '0px' ? '-50px' : '0'; // Alterna entre mostrar e esconder a descrição
+    });
+});

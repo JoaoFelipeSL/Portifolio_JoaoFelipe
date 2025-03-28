@@ -771,7 +771,7 @@ main {
 }
 .description {
     position: absolute;
-    bottom: -70px;
+    bottom: -100px;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 1);;
@@ -780,7 +780,9 @@ main {
     padding: 10px;
     font-size: 14px;
     transition: bottom 0.3s ease-in-out;
+    box-sizing: border-box;  /* Garantir que o padding não ultrapasse os limites da imagem */
 }
+
 .carousel-item:hover .description {
     bottom: 0;
 }
@@ -807,4 +809,38 @@ main {
 }
 .right {
     right: 5%;
+}
+/* Responsividade */
+@media (max-width: 1500px) {
+    .Projetos h1 {
+        font-size: 50px;
+    }
+    .carousel-item {
+        width: 550px;
+        height: 350px;
+    }
+}
+@media (max-width: 780px) {
+    .Projetos h1 {
+        font-size: 50px;
+    }
+    .carousel-item {
+        width: 475px;
+        height: 300px;
+    }
+}
+@media (max-width: 480px) {
+    .Projetos h1 {
+        font-size: 50px;
+    }
+
+    .carousel-item {
+        width: 350px;
+        height: 200px;
+    }
+
+    .description {
+        bottom: -50px; /* Desce a descrição para não cobrir a imagem */
+        font-size: 12px;
+    }
 }
