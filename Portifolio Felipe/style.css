@@ -704,6 +704,7 @@ main {
     color: rgba(255, 255, 255, 1);
     margin-bottom: 0;
 }
+
 .Projetos {
     text-align: center;
     height: 920px;
@@ -718,6 +719,7 @@ main {
     position: relative;
     flex-direction: column;
 }
+
 .carousel-container {
     display: flex;
     align-items: center;
@@ -727,6 +729,7 @@ main {
     height: 100%;
     justify-content: center;
 }
+
 .carousel {
     overflow: hidden;
     width: 100%;
@@ -734,10 +737,12 @@ main {
     display: flex;
     align-items: center;
 }
+
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
+
 .carousel-item {
     width: 600px;
     height: 400px;
@@ -747,6 +752,18 @@ main {
     cursor: pointer;
     overflow: hidden;
 }
+
+.carousel-item .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o ícone */
+    font-size: 40px; /* Tamanho do ícone */
+    color: rgba(255, 255, 255, 0.8); /* Cor branca com leve transparência */
+    pointer-events: none; /* Permite que o clique na imagem funcione, sem bloquear o clique */
+    opacity: 1; /* Agora o ícone está sempre visível */
+}
+
 .carousel-item img {
     width: 100%;
     height: 100%;
@@ -756,25 +773,30 @@ main {
     opacity: 0.6;
     transition: opacity 0.3s;
 }
+
 .carousel-item img:hover {
     opacity: 1;
 }
+
 .carousel-item img:nth-child(2) {
     opacity: 0;
     transition: opacity 0.3s;
 }
+
 .carousel-item:hover img:nth-child(1) {
     opacity: 0.6;
 }
+
 .carousel-item:hover img:nth-child(2) {
     opacity: 1;
 }
+
 .description {
     position: absolute;
-    bottom: -100px;
+    bottom: -150px;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 1);;
+    background: rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0, 0.62);
     text-align: center;
     padding: 10px;
@@ -786,12 +808,15 @@ main {
 .carousel-item:hover .description {
     bottom: 0;
 }
+
 .hidden {
     display: none;
 }
+
 .active {
     display: block;
 }
+
 .arrow {
     background: rgba(0, 0, 0, 0);
     color: white;
@@ -804,12 +829,15 @@ main {
     transform: translateY(-50%);
     z-index: 10;
 }
+
 .left {
     left: 5%;
 }
+
 .right {
     right: 5%;
 }
+
 /* Responsividade */
 @media (max-width: 1500px) {
     .Projetos h1 {
@@ -820,6 +848,7 @@ main {
         height: 350px;
     }
 }
+
 @media (max-width: 780px) {
     .Projetos h1 {
         font-size: 50px;
@@ -829,6 +858,7 @@ main {
         height: 300px;
     }
 }
+
 @media (max-width: 480px) {
     .Projetos h1 {
         font-size: 50px;
