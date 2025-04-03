@@ -600,7 +600,7 @@ main {
 }
 .cards_tecnologias {
     margin: auto;
-    max-width: 1100px;
+    max-width: 1000px;
     height: 700px;
     display: flex;
     justify-content: center;
@@ -609,8 +609,8 @@ main {
     gap: 20px;
 }
 .cards_tecnologias .card {
-    height: 270px;
-    width: 270px;
+    height: 200px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -618,8 +618,8 @@ main {
     color: rgba(255, 255, 255, 1);
 }
 .cards_tecnologias > .card > i {
-    font-size: 100px;
-    margin-top: 90px;
+    font-size: 90px;
+    margin-top: 30px;
 }
 .cards_tecnologias > .card > h1 {
     font-size: 30px;
@@ -631,8 +631,8 @@ main {
 /* Responsividade */
 @media (max-width: 1500px) {
     .cards_tecnologias .card {
-        height:250px;
-        width: 250px;
+        height:200px;
+        width: 200px;
     }
     .cards_tecnologias > .card > i {
         font-size: 90px;
@@ -644,12 +644,12 @@ main {
 }
 @media (max-width: 1150px) {
     .cards_tecnologias .card {
-        height: 230px;
-        width: 230px;
+        height: 200px;
+        width: 200px;
     }
     .cards_tecnologias > .card > i {
         font-size: 90px;
-        margin-top: 60px;
+        margin-top: 40px;
     }
     .cards_tecnologias > .card > h1 {
         font-size: 25px;
@@ -662,14 +662,15 @@ main {
 }
 @media (max-width: 780px) {
     .Tecnologias {
-        height: 1800px;
+        height: 1000px;
     }
     .cards_tecnologias .card {
-        height: 250px;
-        width: 250px;
+        height: 150px;
+        width: 150px;
     }
     .cards_tecnologias > .card > i {
-        font-size: 100px;
+        font-size: 70px;
+        margin-top: 20px;
     }
     .cards_tecnologias > .card > h1 {
         font-size: 20px;
@@ -697,7 +698,10 @@ main {
     .Tecnologias > h1 {
         font-size: 30px;
     }
-}
+}  
+
+
+
 /*Projetos*/
 .Projetos h1 {
     font-size: 50px;
@@ -860,8 +864,11 @@ main {
 }
 
 @media (max-width: 480px) {
+    .Projetos {
+        height: 400px;
+    }
     .Projetos h1 {
-        font-size: 50px;
+        font-size: 30px;
     }
 
     .carousel-item {
@@ -873,4 +880,141 @@ main {
         bottom: -50px; /* Desce a descrição para não cobrir a imagem */
         font-size: 12px;
     }
+}
+
+
+/*Escolaridade*/
+.escolaridade h1 {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 0;
+}
+
+.escolaridade {
+    text-align: center;
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.text_certificado {
+    max-width: 1500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+.text_info {
+    max-width: 750px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    text-align: start;
+    margin-left: 20px;
+}
+.certificado {
+    max-width: 750px;
+    margin-right: 20px;
+    perspective: 1000px;
+}
+.certificado img {
+    width: 400px;
+    transition: transform 0.2s ease-out;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+/* Responsividade */
+@media (max-width: 1550px) {
+    .text_certificado {
+        flex-wrap: wrap;
+    }
+    .text_info {
+        text-align: center;
+    }
+}
+
+@media (max-width: 780px) {
+    .text_certificado {
+        flex-wrap: wrap;
+    }
+    .text_info {
+        text-align: center;
+    }
+    .certificado img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .escolaridade h1 {
+        font-size: 30px;
+    }
+    .text_certificado {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    .text_info {
+        text-align: center;
+        font-size: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .certificado img {
+        width: 250px;
+    }
+
+}
+
+
+/*Certificados*/
+.certificados{
+    text-align: start;
+    height: 920px;
+    max-width: 1600px;
+    margin: auto;
+    background: linear-gradient(to right, #0F1013, #000000);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-box {
+    width: 300px;
+    color: white;
+    margin-right: 20px;
+}
+
+.text-box h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.accordion {
+    display: flex;
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.panel {
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: width 0.5s ease-in-out;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 30px;
+    opacity: 0.3;
+}
+
+.panel:hover {
+    width: 100%;
+    opacity: 10;
 }
