@@ -265,11 +265,13 @@ main {
     }
 
     .imagem_hero > img {
-        height: 300px; /* Torna a imagem menor */
-        width: 300px; /* Torna a imagem redonda */
-        border-radius: 50%; /* Torna a imagem redonda */
+        height: 250px; /* Torna a imagem menor */
+        width: 250px; /* Torna a imagem redonda */
+        border-radius: 100%; /* Torna a imagem redonda */
         opacity: 1; /* Aumenta a opacidade */
         margin: 0; /* Remove as margens laterais */
+        border: 5px solid white;
+        margin-top: 50px;
     }
 
     .info_hero {
