@@ -268,10 +268,11 @@ main {
         height: 250px; /* Torna a imagem menor */
         width: 250px; /* Torna a imagem redonda */
         border-radius: 100%; /* Torna a imagem redonda */
-        opacity: 1; /* Aumenta a opacidade */
+        opacity: 0.9; /* Aumenta a opacidade */
         margin: 0; /* Remove as margens laterais */
         border: 5px solid white;
         margin-top: 50px;
+        filter: brightness(1); /* Escurece a imagem, o valor vai de 0 (totalmente escuro) a 1 (brilho normal) */
     }
 
     .info_hero {
@@ -592,6 +593,10 @@ main {
         height: 1400px;
         justify-content: start;
         align-items: start;
+    }
+    .card {
+        height: 350px;
+        width: 400px;
     }
 
 }

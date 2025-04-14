@@ -6,7 +6,7 @@ function mostrarMais(servico) {
     let textoAdicional = {
         websites: "Construo websites para empresas, pequenos negócios e sites pessoais, sempre buscando atender ao máximo os gostos dos meus clientes e criando sites que reflitam suas identidades de forma única e personalizada.",
         sistemas: "Trabalho com o desenvolvimento de sistemas que atendem a diversas demandas, como chatbots, administração de estoque e gerenciadores de atividades empresariais e acadêmicas.",
-        database: " Descrição expandida sobre o trabalho com bancos de dados, como manipulação e segurança de dados."
+        database: "Atuação com bancos de dados relacionais, envolvendo modelagem, criação e manutenção de estruturas como tabelas, procedimentos e relacionamentos. Experiência com manipulação de dados por meio de linguagens como SQL."
     };
 
     if (descricao.classList.contains('expandido')) {
