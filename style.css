@@ -1071,6 +1071,9 @@ main {
         margin-top: 100px;
         height: 850px;
     }
+    .text-box h2 {
+        font-size: 30px;
+    }
 
 
 }
