@@ -847,7 +847,7 @@ main {
 
 .description {
     position: absolute;
-    bottom: -150px;
+    bottom: 0;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 1);
@@ -855,9 +855,14 @@ main {
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    transition: bottom 0.3s ease-in-out;
-    box-sizing: border-box;  /* Garantir que o padding não ultrapasse os limites da imagem */
-}
+    box-sizing: border-box;
+    transform: translateY(100%); /* Esconde pra baixo */
+    transition: transform 0.3s ease-in-out;
+  }
+  .description.visible {
+    transform: translateY(0); /* Mostra */
+  }
+  
 
 .carousel-item:hover .description {
     bottom: 0;
@@ -923,7 +928,7 @@ main {
 
     .carousel-item {
         width: 350px;
-        height: 200px;
+        height: 300px;
     }
 
     .description {

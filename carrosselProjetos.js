@@ -45,9 +45,10 @@ document.querySelector('.carousel-container').addEventListener('touchend', (e) =
 
 // Exibir a descrição ao clicar na imagem
 const carouselItems = document.querySelectorAll('.carousel-item');
+
 carouselItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const description = item.querySelector('.description');
-        description.style.bottom = description.style.bottom === '0px' ? '-150px' : '0'; // Alterna entre mostrar e esconder a descrição
-    });
+  item.addEventListener('click', () => {
+    const description = item.querySelector('.description');
+    description.classList.toggle('visible');
+  });
 });
