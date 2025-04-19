@@ -89,7 +89,7 @@ header {
         width: 100%;
         background-color: rgba(11, 12, 13, 1);
         position: absolute;
-        top: 90px;
+        top: 40px;
         left: 0;
         padding: 10px 0;
         z-index: 10;
@@ -124,6 +124,12 @@ header {
     .contatos_navbar > a > i {
         font-size: 25px;
         margin-left: 10px;
+    }
+    header {
+        height: 40px;
+    }
+    .logo >  img {
+        height: 35px;
     }
     
 }
@@ -596,7 +602,9 @@ main {
     }
     .card {
         height: 350px;
-        width: 400px;
+        width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
 }
