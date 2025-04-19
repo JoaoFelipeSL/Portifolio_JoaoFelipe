@@ -232,6 +232,7 @@ main {
         flex-direction: column; /* Permanece em linha até 768px */
         align-items: center;
         justify-content: center;
+        height: 1200px;
     }
 
     .imagem_hero > img {
@@ -264,23 +265,19 @@ main {
 @media (max-width: 480px) {
     /* Agora, para telas de celular (480px ou menor), o layout vira coluna */
     .hero {
-        flex-direction: column; /* Empilha os elementos em coluna */
-        height: auto;
-        justify-content: center;
-        align-items: center;
+        max-width: 500px;
+        height: 500px;
     }
 
     .imagem_hero > img {
-        height: 250px; /* Torna a imagem menor */
-        width: 250px; /* Torna a imagem redonda */
-        border-radius: 100%; /* Torna a imagem redonda */
-        opacity: 0.9; /* Aumenta a opacidade */
-        margin: 0; /* Remove as margens laterais */
-        border: 5px solid white;
-        margin-top: 50px;
-        filter: brightness(1); /* Escurece a imagem, o valor vai de 0 (totalmente escuro) a 1 (brilho normal) */
+        margin-top: 20px;
+        opacity: 0.9;
+        width: 350px;
+        border-top-left-radius: 8000px;
+        border-bottom-right-radius: 9000px;
+        filter: brightness(0.9); /* Escurece a imagem, o valor vai de 0 (totalmente escuro) a 1 (brilho normal) */
+  
     }
-
     .info_hero {
         margin-left: 0;
         text-align: center;
