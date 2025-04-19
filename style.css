@@ -164,7 +164,9 @@ main {
 .text_hero h3 {
     color: rgba(255, 255, 255, 0.557);
 }
-
+.saltando {
+    display: none;
+}
 .info_hero button {
     width: 320px;
     height: 60px;
@@ -267,16 +269,20 @@ main {
     /* Agora, para telas de celular (480px ou menor), o layout vira coluna */
     .hero {
         max-width: 500px;
-        height: 730px;
+        height: 700px;
     }
-
+    .imagem_hero {
+        width: 100%;
+        height: 100%;
+    }
     .imagem_hero > img {
+        position: relative;
         margin-top: 20px;
-        opacity: 0.9;
-        width: 350px;
-        border-top-left-radius: 8000px;
-        border-bottom-right-radius: 9000px;
-        filter: brightness(0.9); /* Escurece a imagem, o valor vai de 0 (totalmente escuro) a 1 (brilho normal) */
+        border-radius: 0;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        filter: brightness(1); /* Escurece a imagem, o valor vai de 0 (totalmente escuro) a 1 (brilho normal) */
   
     }
     .info_hero {
@@ -285,22 +291,44 @@ main {
     }
 
     .text_hero h1 {
-        font-size: 35px; /* Ajusta o tamanho da fonte */
-    }
+        font-size: 50px;
+        position: absolute;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap; /* 👈 impede quebra de linha */
+        z-index: 10;
+        color: #abababa2;
+        text-align: center;
+      }
+      
 
     .text_hero h3 {
         font-size: 18px; /* Ajusta o tamanho da fonte */
+        display: none;
+        color: #000000;
     }
-
+    .saltando {
+        display: flex;
+        width: 60px;
+        position: absolute;
+        top: 530px;
+        z-index: 10;
+    }
     .info_hero button {
         width: 250px;
         height: 45px;
         font-size: 16px;
         margin-top: 30px;
-    }
-
-    .hero {
-        margin-top: 90px;
+        position: absolute;
+        border: none;
+        z-index: 10;
+        top: 600px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        color: #000000;
+       
     }
 }
 /*ARTE*/
@@ -449,7 +477,7 @@ main {
     }
     .slider {
         width: 250px;
-        height: 250px;
+        height: 500px;
         margin: 0 auto 20px auto; /* Centraliza horizontalmente e adiciona espaçamento abaixo */
         display: flex;
         justify-content: center;
@@ -600,7 +628,7 @@ main {
     }
     .card {
         height: 350px;
-        width: 300px;
+        width: 330px;
         margin-left: 10px;
         margin-right: 10px;
     }
