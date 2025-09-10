@@ -729,7 +729,7 @@ main {
 }
 @media (max-width: 480px) {
     .Tecnologias {
-        height: 1000px;
+        height: 1100px;
     }
     .cards_tecnologias .card {
         height: 150px;
@@ -772,6 +772,30 @@ main {
     overflow: hidden;
     position: relative;
     flex-direction: column;
+}
+.projetosItem {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.linksProjetos {
+    margin-left: 10px;
+    
+    
+}
+.linksProjetos button {
+    height: 30px;
+    width: 150px;
+    border: none;
+    color: #0F1013;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.linksProjetos button:hover {
+    font-size: 15px;
+    transition-duration: 1s;
 }
 
 .carousel-container {
@@ -932,7 +956,7 @@ main {
     }
 
     .description {
-        bottom: -50px; /* Desce a descrição para não cobrir a imagem */
+        bottom: -0px; /* Desce a descrição para não cobrir a imagem */
         font-size: 12px;
     }
 }
