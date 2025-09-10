@@ -729,7 +729,7 @@ main {
 }
 @media (max-width: 480px) {
     .Tecnologias {
-        height: 1100px;
+        height: 1250px;
     }
     .cards_tecnologias .card {
         height: 150px;
@@ -943,6 +943,9 @@ main {
 }
 
 @media (max-width: 480px) {
+    .Projetos > h1 {
+        margin-bottom: 50px;
+    }
     .Projetos {
         height: 400px;
     }
