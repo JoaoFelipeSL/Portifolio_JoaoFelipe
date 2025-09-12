@@ -170,10 +170,10 @@ main {
 .info_hero button {
     width: 320px;
     height: 60px;
-    background-color: #00000000;
+    background-color: white;
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50px;
-    color: rgba(255, 255, 255, 1);
+    color: #0F1013;
     font-size: 20px;
     margin-top: 50px;
 }
@@ -548,11 +548,11 @@ main {
 .card button {
     font-size: 15px;
     width: 270px;
-    height: 60px;
+    height: 50px;
     border-radius: 50px;
     border: 2px solid rgba(255, 255, 255, 1);
-    color: rgb(255, 255, 255);
-    background-color: #00000000;
+    color: #0F1013;
+    background-color: white;
     margin-bottom: 15px;
 }
 .card button:hover {
@@ -657,6 +657,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 .cards_tecnologias .card {
     height: 200px;
@@ -665,14 +666,16 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color: rgba(255, 255, 255, 1);
+    background-color: white;
 }
 .cards_tecnologias > .card > i {
     font-size: 90px;
     margin-top: 30px;
+    color: #0F1013;
 }
 .cards_tecnologias > .card > h1 {
     font-size: 30px;
+    color: #0F1013;
 }
 .html_css {
     margin-top: 90px;
