@@ -170,10 +170,10 @@ main {
 .info_hero button {
     width: 320px;
     height: 60px;
-    background-color: white;
+    background-color: #262a3673;
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50px;
-    color: #0F1013;
+    color: #ffffffa2;
     font-size: 20px;
     margin-top: 50px;
 }
