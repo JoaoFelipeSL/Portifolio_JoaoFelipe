@@ -48,6 +48,7 @@ header {
 .contatos_navbar {
     margin-right: 20px;
     text-decoration: none;
+    display: flex;
 }
 
 .contatos_navbar > a > i {
@@ -75,8 +76,19 @@ header {
 .contatos_navegacao {
     display: flex;
 }
-
-@media (max-width: 768px) {
+.cv_download {
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+    color: #0F1013;
+    border-radius: 30px;
+    border: none !important;
+}
+.cv_download:hover {
+    background-color: #ffffff83;
+    transition-duration: 1s;
+}
+@media (max-width: 850px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -90,7 +102,7 @@ header {
         width: 100%;
         background-color: rgba(11, 12, 13, 1);
         position: absolute;
-        top: 40px;
+        top: 100px;
         left: 0;
         padding: 10px 0;
         z-index: 10;
@@ -131,6 +143,14 @@ header {
     }
     .logo >  img {
         height: 35px;
+    }
+    .navbar {
+        top: 40px;
+       
+    }
+    .cv_download {
+        width: 100px;
+        height: 25px;
     }
     
 }
